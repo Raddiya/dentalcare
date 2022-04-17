@@ -1,11 +1,11 @@
 import React from 'react';
 
-const Services = () => {
+const Footer = () => {
     return (
         <div>
-            <h1>goo</h1>
+            
         </div>
     );
 };
 
-export default Services;
+export default Footer;
