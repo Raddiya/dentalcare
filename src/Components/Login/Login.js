@@ -86,6 +86,10 @@ const Login = () => {
         }
     }, [hookError, googleError])
 
+    if (googleError){
+        console.log(googleError)
+    }
+
     return (
         <div className="login-container">
             <div className="login-title">LOGIN</div>
