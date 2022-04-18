@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import './Card.css';
 
 const Card = (props) => {
@@ -12,6 +13,11 @@ const Card = (props) => {
         <h4>Name: {name}</h4>
         <p>{about}</p>
        <h4>Price:{cost}</h4>
+       <div className=" justify-content-center">
+            <Link to="/services">
+             <button>Checkout</button>
+            </Link>
+          </div>
       </div>
     </div>
   );

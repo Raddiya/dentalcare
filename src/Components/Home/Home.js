@@ -15,8 +15,7 @@ const Home = () => {
          <div className="banner">
            <span className='intro' >
              <h3>Your smile is our passion.</h3>
-           <p></p>
-           
+           <p>We are here to help you.</p>          
            </span>
            
         <p> </p>
@@ -33,11 +32,7 @@ const Home = () => {
                 index < 3 && <Card key={index} product={item}></Card>
             )}
           </div>
-          <div className=" d-flex justify-content-center">
-            <Link className="services-container allButton" to="/services">
-              See more
-            </Link>
-          </div>
+          
         </div>
       }
         </div>

@@ -5,7 +5,7 @@ const Footer = () => {
     return (
         <footer>
             <hr></hr>
-            <p className='footer'>© 2022 Company, Inc. All rights reserved by DentalCare.</p>
+            <p className='footer'> 2022 Company© Inc. All rights reserved by DentalCare.</p>
         </footer>
     );
 };
