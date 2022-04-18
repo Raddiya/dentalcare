@@ -1,8 +1,10 @@
-import React from "react";
-import { NavLink } from "react-router-dom";
-import "./Header.css";
+
+import React from 'react';
+import { NavLink } from 'react-router-dom';
+
 const Header = () => {
   return (
+    <div>
     <nav className="nav-link">
       <div className="container d-flex justify-content-center align-items-center gap-5">
         <div>
@@ -45,6 +47,7 @@ const Header = () => {
         </div>
       </div>
     </nav>
+    </div>
   );
 };
 

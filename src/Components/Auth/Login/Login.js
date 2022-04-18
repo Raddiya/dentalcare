@@ -3,7 +3,8 @@ import { ToastContainer } from "react-bootstrap";
 import { useSignInWithEmailAndPassword, useSignInWithGoogle } from "react-firebase-hooks/auth";
 import toast from "react-hot-toast";
 import { Link, useLocation, useNavigate } from "react-router-dom";
-import auth from "../../Firebase/Firebase.init";
+import auth from "../../../Firebase/Firebase.init";
+
 
 
 const Login = () => {

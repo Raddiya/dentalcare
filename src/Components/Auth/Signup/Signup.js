@@ -1,9 +1,9 @@
-import { useEffect, useState } from "react";
-import { ToastContainer } from "react-bootstrap";
-import { useCreateUserWithEmailAndPassword } from "react-firebase-hooks/auth";
-import toast from "react-hot-toast";
-import { useLocation, useNavigate } from "react-router-dom";
-import auth from "../../Firebase/Firebase.init";
+import React, { useEffect, useState } from 'react';
+import { ToastContainer } from 'react-bootstrap';
+import { useCreateUserWithEmailAndPassword } from 'react-firebase-hooks/auth';
+import toast from 'react-hot-toast';
+import { useLocation, useNavigate } from 'react-router-dom';
+import auth from '../../../Firebase/Firebase.init';
 
 const Signup = () => {
     const [userInfo, setUserInfo] = useState({
@@ -19,7 +19,7 @@ const Signup = () => {
 
     const [showPass, setShowPass] = useState(false);
 
-    const [createUserWithEmailAndPassword, user, Loading, hookError] =
+    const [createUserWithEmailAndPassword, user, loading, hookError] =
         useCreateUserWithEmailAndPassword(auth, { sendEmailVerification: true });
 
     const handleEmailChange = (e) => {
@@ -34,7 +34,7 @@ const Signup = () => {
             setUserInfo({ ...userInfo, email: "" });
         }
 
-        // setEmail;
+        // setEmail(e.target.value);
     };
     const handlePasswordChange = (e) => {
         const passwordRegex = /.{6,}/;
@@ -107,6 +107,9 @@ const Signup = () => {
                 />
 
                 <button>Sign up</button>
+
+                {/* {error && <p className="error-message">{error}</p> } */}
+                {/* {hookError && <p className="error-message">{hookError?.message}</p>} */}
                 <ToastContainer />
             </form>
         </div>
