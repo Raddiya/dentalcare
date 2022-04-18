@@ -91,25 +91,22 @@ const Signup = () => {
     }, [user]);
 
     return (
-        <div className="login-container">
-            <div className="login-title">Sign up</div>
-            <form className="login-form" onSubmit={handleLogin}>
-                <input type="text" placeholder="Your Email" onChange={handleEmailChange} />
+        <div className="login-container container">
+            <h1 className="login-title">Sign up</h1>
+            <form onSubmit={handleLogin}>
+                <input className="input" type="text" placeholder="Your Email" onChange={handleEmailChange} />
                 {errors?.email && <p className="error-message">{errors.email}</p>}
                 <div className="relative">
-                    <input type={showPass ? "text" : "password"} placeholder="password" onChange={handlePasswordChange} />
+                    <input className="input"  type={showPass ? "text" : "password"} placeholder="password" onChange={handlePasswordChange} />
                     {errors?.password && <p className="error-message">{errors.password}</p>}
                 </div>
-                <input
+                <input className="input" 
                     type="password"
                     placeholder="confirm password"
                     onChange={handleConfirmPasswordChange}
                 />
-
-                <button>Sign up</button>
-
-                {/* {error && <p className="error-message">{error}</p> } */}
-                {/* {hookError && <p className="error-message">{hookError?.message}</p>} */}
+                <br></br>
+                <button className="button" >Sign up</button>
                 <ToastContainer />
             </form>
         </div>

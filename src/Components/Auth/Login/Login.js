@@ -4,6 +4,7 @@ import { useSignInWithEmailAndPassword, useSignInWithGoogle } from "react-fireba
 import toast from "react-hot-toast";
 import { Link, useLocation, useNavigate } from "react-router-dom";
 import auth from "../../../Firebase/Firebase.init";
+import './Login.css'
 
 
 
@@ -92,20 +93,21 @@ const Login = () => {
     }
 
     return (
-        <div className="login-container">
-            <div className="login-title">LOGIN</div>
-            <form className="login-form" onSubmit={handleLogin}>
-                <input type="text" placeholder="Your Email" onChange={handleEmailChange} />
+        <div className="login-container container">
+            <h1 className="login-title">LOGIN</h1>
+            <form onSubmit={handleLogin}>
+                <input type="text" className= "input" placeholder="Your Email" onChange={handleEmailChange} />
                 {errors?.email && <p className="error-message">{errors.email}</p>}
-                <input type="password" placeholder="password" onChange={handlePasswordChange} />
+                <input className= "input" type="password" placeholder="password" onChange={handlePasswordChange} />
                 {errors?.password && <p className="error-message">{errors.password}</p> }
-                <button>Login</button>
+                <br></br>
+                <button className="button">Login</button>
                 <ToastContainer />
 
                 <p>Don't have an account? <Link to="/signup">Sign up first</Link> </p>
             </form>
 
-            <button onClick={() => signInWithGoogle()}>Google</button>
+            <button className="button" onClick={() => signInWithGoogle()}>Google</button>
         </div>
     );
 };

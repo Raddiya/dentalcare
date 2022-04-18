@@ -1,6 +1,7 @@
 
 import React from 'react';
 import { NavLink } from 'react-router-dom';
+import './Header.css'
 
 const Header = () => {
   return (
@@ -8,14 +9,12 @@ const Header = () => {
     <nav className="nav-link">
       <div className="container d-flex justify-content-center align-items-center gap-5">
         <div>
-          <h1>
-            Dental<span className="left-side">Care</span>
-          </h1>
+          <h1>DentalCare</h1>
         </div>
         <div className="d-flex gap-4">
           <NavLink
             className={({ isActive }) => (isActive ? "link-active" : "link")}
-            to="/"
+            to="/Home"
           >
             Home
           </NavLink>
@@ -42,8 +41,13 @@ const Header = () => {
             to="/signup"
           >
             Signup
-          </NavLink>
-          
+          </NavLink>                  
+          <NavLink
+            className={({ isActive }) => (isActive ? "link-active" : "link")}
+            to="/blog"
+          >
+          Blog
+          </NavLink>                  
         </div>
       </div>
     </nav>

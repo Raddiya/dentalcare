@@ -11,7 +11,7 @@ const Card = (props) => {
       <div className="text-center">
         <h4>Name: {name}</h4>
         <p>{about}</p>
-        <p>Price:{cost}</p>
+       <h4>Price:{cost}</h4>
       </div>
     </div>
   );

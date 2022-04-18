@@ -13,7 +13,13 @@ const Home = () => {
     return (
         <div>
          <div className="banner">
-        <h1 className="custom-style ">DEntsl</h1>
+           <span className='intro' >
+             <h3>Your smile is our passion.</h3>
+           <p></p>
+           
+           </span>
+           
+        <p> </p>
       </div>
       {
         <div className="container mb-5">

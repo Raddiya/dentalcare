@@ -1,10 +1,12 @@
 import React from 'react';
+import './Footer.css';
 
 const Footer = () => {
     return (
-        <div>
-            
-        </div>
+        <footer>
+            <hr></hr>
+            <p className='footer'>© 2022 Company, Inc. All rights reserved by DentalCare.</p>
+        </footer>
     );
 };
 
