@@ -5,9 +5,10 @@ import './Card.css';
 const Card = (props) => {
     const { name, about, picture, cost} = props.product;
   return (
-    <div className="p-4 user-card mb-4">
+   <div className='col'>
+      <div className="p-4 user-card mb-4">
       <div className="text-center">
-        <img className="user-img mb-4" src={picture} alt="" />
+        <img className="user-img mb-4 img-fluid" src={picture} alt="" />
       </div>
       <div className="text-center">
         <h4>Name: {name}</h4>
@@ -20,6 +21,7 @@ const Card = (props) => {
           </div>
       </div>
     </div>
+   </div>
   );
 };
 

@@ -26,7 +26,7 @@ const Home = () => {
             WHAT WE CAN OFFER
             <span className="d-block services">OUR SERVICES</span>
           </h1>
-          <div className="card-compo">
+          <div className="row row-cols-md-2">
             {services.map(
               (item, index) =>
                 index < 3 && <Card key={index} product={item}></Card>

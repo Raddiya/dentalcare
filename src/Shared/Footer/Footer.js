@@ -3,7 +3,7 @@ import './Footer.css';
 
 const Footer = () => {
     return (
-        <footer>
+        <footer className='mt-auto'>
             <hr></hr>
             <p className='footer'> 2022 Company© Inc. All rights reserved by DentalCare.</p>
         </footer>

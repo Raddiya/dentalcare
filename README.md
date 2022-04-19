@@ -1,6 +1,6 @@
 #Dental Care
 
-This project was bootstrapped with [Dental Care](https://camera-hub-bd-raddiya.netlify.app/).
+This project was Javascripted with [Dental Care](https://aquamarine-dieffenbachia-520cb3.netlify.app/).
 
 ## Features
 
