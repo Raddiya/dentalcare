@@ -1,0 +1,44 @@
+[
+    {
+      "id": "624bdefed23924d6e47c9d52",
+      "picture": "http://placehold.it/32x32",
+      "name": "Hester Emerson",
+      "about": "you're looking at two comparable camera bodies, the answer is likely to be no. Both brands are more or less on par when it comes to image quality and sharpness.",
+      "rating": "3.5"
+    },
+    {
+      "id": "624bdefeba20ac4e2254a1f1",
+      "picture": "http://placehold.it/32x32",
+      "name": "Young Mcintyre",
+      "about": "Generally speaking, Nikon's range of Nikkor lenses are cheaper than purchasing the equivalent in a Canon brand.",
+      "rating": "3.2"
+    },
+    {
+      "id": "624bdefef1535451d64dcf36",
+      "picture": "http://placehold.it/32x32",
+      "name": "Perry Benton",
+      "about": " Nikon D850. The D850 is a high-end camera and the best Nikon DSLR on the market. It's designed for professional photographers and is highly versatile.",
+      "rating": "4"
+    },
+    {
+      "id": "624bdefe5dcebd1fe4684c7f",
+      "picture": "http://placehold.it/32x32",
+      "name": "Morse Curtis",
+      "about": " Nikon's dynamic range and low light capability is extremely impressive and definitively better than Canon's",
+      "rating": "4.5"
+    },
+    {
+      "id": "624bdefe44be0c137756565a",
+      "picture": "http://placehold.it/32x32",
+      "name": "Millie Barron",
+      "about": "The Nikon D850 rents for $115 for 7 days. With both of these models being targeted towards professionals, they are both extremely capable cameras. ",
+      "rating": "5"
+    },
+    {
+      "id": "624bdefef6eeab4f317155f0",
+      "picture": "http://placehold.it/32x32",
+      "name": "Gonzales Keller",
+      "about": " It has everything a learner photographer needs: a handy 'Guide Mode' to explain key settings, plus great handling, a huge selection of lenses, and excellent image quality.",
+      "rating": "5"
+    }
+  ]

@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 import './Card.css';
 
 const Card = (props) => {
-    const { name, about, picture, cost} = props.product;
+    const { name, about, picture, cost,id} = props.product;
   return (
    <div className='col'>
       <div className="p-4 user-card mb-4">
@@ -15,8 +15,8 @@ const Card = (props) => {
         <p>{about}</p>
        <h4>Price:{cost}</h4>
        <div className=" justify-content-center">
-            <Link to="/services">
-             <button>Checkout</button>
+            <Link className='checkout-link' to={`/services/${id}`}>
+             <button className='btn btn-success' >Checkout</button>
             </Link>
           </div>
       </div>

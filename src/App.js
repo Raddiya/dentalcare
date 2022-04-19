@@ -1,4 +1,4 @@
-
+import 'react-toastify/dist/ReactToastify.css';
 import { Route, Routes } from 'react-router-dom';
 import './App.css';
 import Home from './Components/Home/Home';
@@ -11,6 +11,7 @@ import Signup from './Components/Auth/Signup/Signup';
 import Services from './Components/Home/Services/Services';
 import Footer from './Shared/Footer/Footer';
 import Blog from './Components/Blog/Blog';
+import Checkout from './Components/Checkout/Checkout';
 
 
 function App() {
@@ -25,13 +26,18 @@ function App() {
             <Services />
           </RequireAuth>
         } ></Route>
+        <Route path='/services/:id' element={
+          <RequireAuth>
+            <Checkout/>
+          </RequireAuth>
+        } ></Route>
         <Route path='/login' element={<Login />} ></Route>
         <Route path="/about" element={<About></About>}></Route>
-        <Route path="/signup" element={<Signup/>}></Route>
+        <Route path="/signup" element={<Signup />}></Route>
         <Route path='/blog' element={<Blog></Blog>} ></Route>
         <Route path='*' element={<Notfound></Notfound>} ></Route>
       </Routes>
-     <Footer></Footer>
+      <Footer></Footer>
     </div>
   );
 }

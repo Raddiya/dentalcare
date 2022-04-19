@@ -1,7 +1,6 @@
+import { ToastContainer, toast } from 'react-toastify';
 import React, { useEffect, useState } from 'react';
-import { ToastContainer } from 'react-bootstrap';
 import { useCreateUserWithEmailAndPassword } from 'react-firebase-hooks/auth';
-import toast from 'react-hot-toast';
 import { useLocation, useNavigate } from 'react-router-dom';
 import auth from '../../../Firebase/Firebase.init';
 
@@ -11,6 +10,7 @@ const Signup = () => {
         password: "",
         confirmPass: "",
     });
+    const notify = (toastError) => toast(toastError);
     const [errors, setErrors] = useState({
         email: "",
         password: "",
@@ -54,7 +54,7 @@ const Signup = () => {
             setUserInfo({ ...userInfo, confirmPass: e.target.value });
             setErrors({ ...errors, password: "" });
         } else {
-            setErrors({ ...errors, password: "Password's don't match" });
+            notify("Password's don't match");
             setUserInfo({ ...userInfo, confirmPass: "" });
         }
     };
@@ -67,16 +67,8 @@ const Signup = () => {
 
     useEffect(() => {
         if (hookError) {
-            switch (hookError?.code) {
-                case "auth/invalid-email":
-                    toast("Invalid email provided, please provide a valid email");
-                    break;
-                case "auth/invalid-password":
-                    toast("Wrong password. Intruder!!");
-                    break;
-                default:
-                    toast("something went wrong");
-            }
+            notify(hookError.message)
+            
         }
     }, [hookError]);
 

@@ -7,7 +7,7 @@ import { signOut } from 'firebase/auth';
 import { Container, Nav, Navbar } from 'react-bootstrap';
 
 const Header = () => {
-  const [user,loading,error]= useAuthState (auth)
+  const [user]= useAuthState (auth)
   const handleSignOut= event =>{
     event.preventDefault()
     signOut (auth)
@@ -41,7 +41,7 @@ const Header = () => {
           </NavLink>
           {
             user?(<NavLink onClick={handleSignOut}
-              className={({ isActive }) => (isActive ? "link link-active" : "link")}
+              className= "link"
               to="/"
             >
              Signout

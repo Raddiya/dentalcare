@@ -1,7 +1,6 @@
 import { useEffect, useState } from "react";
-import { ToastContainer } from "react-bootstrap";
+import { ToastContainer, toast } from 'react-toastify';
 import { useSignInWithEmailAndPassword, useSignInWithGoogle } from "react-firebase-hooks/auth";
-import toast from "react-hot-toast";
 import { Link, useLocation, useNavigate } from "react-router-dom";
 import auth from "../../../Firebase/Firebase.init";
 import './Login.css'
@@ -9,6 +8,7 @@ import './Login.css'
 
 
 const Login = () => {
+    const notify = (toastError) => toast(toastError);
     const [userInfo, setUserInfo] = useState({
         email: "",
         password: "",
@@ -72,25 +72,16 @@ const Login = () => {
        }, [user]);
 
     useEffect(() => {
-        const error = hookError || googleError;
-        if(error){
-            switch(error?.code){
-                case "auth/invalid-email":
-                    toast("Invalid email provided, please provide a valid email");
-                    break;
-                
-                case "auth/invalid-password":
-                    toast("Wrong password. Intruder!!")
-                    break;
-                default:
-                    toast("something went wrong")
-            }
+        if (hookError) {
+            notify(hookError.message)
         }
-    }, [hookError, googleError])
+    }, [hookError])
+    useEffect(() => {
+        if (googleError) {
+            notify(googleError.message)
+        }
+    }, [googleError])
 
-    if (googleError){
-        console.log(googleError)
-    }
 
     return (
         <div className="login-container container">
